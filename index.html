@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              offwhite: "hsl(36, 100%, 99%)",
+              grayishblue: "hsl(233, 8%, 79%)",
+              darkGrayishBlue: "hsl(236, 13%, 42%)",
+              veryDarkBlue: "hsl(240, 100%, 5%)",
+              softOrange: "hsl(35, 77%, 62%)",
+              softRed: "hsl(5, 85%, 63%)",
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter h-screen">
+    <div
+      class="w-[70%] hidden z-20 menubar text-black font-bold h-screen top-0 absolute right-0 bg-white lg:hidden"
+    >
+      <div class="flex flex-col pl-5 mt-32 justify-center gap-7">
+        <a class="menu-close" href="#">
+          <img
+            class="w-[25px] absolute top-10 right-6"
+            src="assets/images/icon-menu-close.svg"
+            alt=""
+          />
+        </a>
+        <a class="text-darkGrayishBlue hover:text-black transition" href="#"
+          >Home</a
+        >
+        <a class="text-darkGrayishBlue hover:text-black transition" href="#"
+          >New</a
+        >
+        <a class="text-darkGrayishBlue hover:text-black transition" href="#"
+          >Popular</a
+        >
+        <a class="text-darkGrayishBlue hover:text-black transition" href="#"
+          >Trending</a
+        >
+        <a class="text-darkGrayishBlue hover:text-black transition" href="#"
+          >Categoris</a
+        >
+      </div>
+    </div>
+    <div
+      class="w-full hidden body-shadow h-screen z-10 top-0 absolute right-0 bg-black bg-opacity-25 lg:hidden"
+    ></div>
+
+    <header>
+      <div class="container mt-10 mx-auto max-w-[1200px]">
+        <nav class="hidden md:flex lg:flex justify-between">
+          <img src="assets/images/logo.svg" alt="" />
+          <div class="flex gap-10">
+            <a class="text-darkGrayishBlue hover:text-black transition" href="#"
+              >Home</a
+            >
+            <a class="text-darkGrayishBlue hover:text-black transition" href="#"
+              >New</a
+            >
+            <a class="text-darkGrayishBlue hover:text-black transition" href="#"
+              >Popular</a
+            >
+            <a class="text-darkGrayishBlue hover:text-black transition" href="#"
+              >Trending</a
+            >
+            <a class="text-darkGrayishBlue hover:text-black transition" href="#"
+              >Categoris</a
+            >
+          </div>
+        </nav>
+        <nav
+          class="lg:hidden px-5 md:px-0 lg:px-0 flex justify-between mobile-menu"
+        >
+          <img src="assets/images/logo.svg" alt="" />
+          <a class="mobile-menu-on" onclick="clicked" href="">
+            <img src="assets/images/icon-menu.svg" alt="" />
+          </a>
+        </nav>
+      </div>
+    </header>
+    <div class="container mt-10 mx-auto px-5 md:px-0 lg:px-0 max-w-[1200px]">
+      <section class="grid gap-14 lg:grid-cols-3">
+        <div class="left md:col-span-2 lg:col-span-2">
+          <div>
+            <img
+              class="hidden md:block lg:block"
+              src="assets/images/image-web-3-desktop.jpg"
+              alt=""
+            />
+            <img
+              class="lg:hidden"
+              src="assets/images/image-web-3-mobile.jpg"
+              alt=""
+            />
+            <div class="sm:flex mt-9 gap-14">
+              <h1
+                class="text-6xl mb-4 lg:mb-0 hoho text-veryDarkBlue font-bold"
+              >
+                The Bright Future of Web 3.0?
+              </h1>
+              <div>
+                <p class="leading-7 mb-[50px] text-left text-darkGrayishBlue">
+                  We dive into tje next evolution of the web that claims to put
+                  the power of the platforms back into the hands of the people.
+                  But is it really fulfilling its promise?
+                </p>
+                <a
+                  class="px-8 py-4 font-bold tracking-[5px] text-white bg-softRed"
+                  href=""
+                  >READ MORE</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right flex flex-col gap-8 px-5 py-8 bg-veryDarkBlue">
+          <h1 class="text-softOrange text-5xl font-bold">New</h1>
+          <div>
+            <h3 class="text-white font-bold text-xl">
+              Hydrogen VS Electric Cars
+            </h3>
+            <p class="text-grayishblue">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </div>
+          <div class="w-full h-[1px] bg-white"></div>
+          <div>
+            <h3 class="text-white font-bold text-xl">
+              The Downsides of AI Aristry
+            </h3>
+            <p class="text-grayishblue">
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <div class="w-full h-[1px] bg-white"></div>
+          <div>
+            <h3 class="text-white font-bold text-xl">
+              Is VC Funding Drying Up?
+            </h3>
+            <p class="text-grayishblue">
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      class="container mt-10 px-5 pb-4 md:pb-0 lg:pb-0 md:px-0 lg:px-0 mx-auto max-w-[1200px]"
+    >
+      <section class="flex-col md:flex-row lg:flex-row flex gap-14">
+        <div class="flex gap-6">
+          <img
+            class="w-[150px] h-[135px]"
+            src="assets/images/image-retro-pcs.jpg"
+            alt=""
+          />
+          <div class="flex flex-col gap-1 md:gap-3 lg:gap-3">
+            <h4 class="text-grayishblue font-bold text-3xl">01</h4>
+            <p class="text-black text-md font-bold">Reviving Retro PCs</p>
+            <p class="text-darkGrayishBlue">
+              What happens whan old PCs are given modern upgrades?
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-6">
+          <img
+            class="w-[150px] h-[135px]"
+            src="assets/images/image-top-laptops.jpg"
+            alt=""
+          />
+          <div class="flex flex-col gap-1 md:gap-3 lg:gap-3">
+            <h4 class="text-grayishblue font-bold text-3xl">02</h4>
+            <p class="text-black text-md font-bold">Top 10 Laptops of 2022</p>
+            <p class="text-darkGrayishBlue">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-6">
+          <img
+            class="w-[150px] h-[135px]"
+            src="assets/images/image-gaming-growth.jpg"
+            alt=""
+          />
+          <div class="flex flex-col gap-1 md:gap-3 lg:gap-3">
+            <h4 class="text-grayishblue font-bold text-3xl">03</h4>
+            <p class="text-black text-md font-bold">The Growth of Gaming</p>
+            <p class="text-darkGrayishBlue">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
